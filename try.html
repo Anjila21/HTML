@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#" method="post" onsumbit="return validation()">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" id="user" placeholder="Enter your name">
+            <span id="username"></span>
+        </div>
+        <div>
+            <input type="submit" value="Click me">
+        </div>
+    </form>
+    <script type="text/javascript">
+        function validation()
+        {
+            var u = document.getElementbyId('user').value;
+            if (u == " ")
+            {
+                document.getElementbyId('username').innerHTML="**Please enter your name";
+                
+            }
+        }
+    </script>
+</body>
+</html>

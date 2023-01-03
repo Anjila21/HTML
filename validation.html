@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <div>
+        <form action="#" method="post" onsumbit="return validation()">
+        <div>
+            <label> Username:</label>
+            <input type="text" value="" id="user" placeholder="Enter your name"> <br>
+        <span id="username"></span>
+        </div>
+        <div> 
+            <label> Address: </label>
+            <input type="text" value="" id="add" placeholder="Enter Address"> <br>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" value="" placeholder="Your Email" id="eid"> <br>
+        </div>
+        <div>
+            <label >Password:</label>
+        <input type="password" value="" id="pass" placeholder="Your password"> <b>
+        </div>
+        <div>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="Female">Female
+        </div>
+        <div>
+            <input type="submit" value="Click me" >
+        </div>
+        
+    </form>
+   </div>
+    <script type="text/javascript">
+        function validation()
+        {
+            var user = document.getElementbyId('user').value;
+            if(user==""){
+            document.getElementById('username').innerHTMl="Please Enter Valid Name";
+            return false;}
+        }
+
+    </script>
+    
+</body>
+</html>
